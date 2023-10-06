@@ -4,6 +4,7 @@ createApp({
   data() {
     return {
       emailArray: [],
+      items: 10,
     }
   },
   methods: {
@@ -25,7 +26,7 @@ createApp({
     }
   },
   mounted() {
-    this.getAPI(10);
+    this.getAPI(this.items);
   },
 
 }).mount("#app");

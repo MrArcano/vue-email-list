@@ -12,7 +12,7 @@
 <body>
   <div id="app">
     <!-- Vue -->
-    <ol v-if="emailArray.length === 10">
+    <ol v-if="emailArray.length === items">
       <li v-for="email in emailArray">{{email}}</li>
     </ol>
     <span v-else>Loading...</span>
