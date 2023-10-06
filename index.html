@@ -7,15 +7,20 @@
   <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
   <!-- Vue -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <!-- CSS custom -->
+  <link rel="stylesheet" href="css/style.css">
   <title>Vue Email List</title>
 </head>
 <body>
   <div id="app">
-    <!-- Vue -->
-    <ol v-if="emailArray.length === items">
-      <li v-for="email in emailArray">{{email}}</li>
-    </ol>
-    <span v-else>Loading...</span>
+    <div class="container">
+      <h1>Mailing List</h1>
+      <!-- Vue -->
+      <ul v-if="emailArray.length === items">
+        <li v-for="(email,index) in emailArray">{{index+1}}. {{email}}</li>
+      </ul>
+      <h3 v-else class="loading">Loading</h3>
+    </div>
   </div>
 
   <script src="js/script.js"></script>

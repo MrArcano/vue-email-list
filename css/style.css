@@ -1,0 +1,63 @@
+:root{
+  --rgb-color: 255, 165, 0;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#app{
+  height: 100vh;
+}
+
+.container{
+  margin: 32px auto;
+  height: calc(100% - 64px);
+  width: 500px;
+  border: 4px solid black;  
+}
+
+h1{
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  border-bottom: 4px solid black;
+  background-color: rgb(var(--rgb-color));
+}
+
+h3{
+  text-align: center;
+  margin: 32px;
+}
+
+ul{
+  height: calc(100% - 80px);
+  overflow: auto;
+  background-color: rgba(var(--rgb-color), 0.5);
+}
+
+li{
+  list-style: none;
+  margin-left: 1.5rem;
+  display: block;
+  margin: 32px;
+  border-bottom: 2px solid black;
+  padding: 16px;
+}
+
+.loading::after{
+  content: "";
+  animation: loading 1s infinite;
+}
+
+@keyframes loading{
+  0% {content: ".";}
+  50% {content: "..";}
+  100% {content: "...";}
+}
